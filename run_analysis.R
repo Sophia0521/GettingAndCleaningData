@@ -4,7 +4,7 @@
 cp3test<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/test/X_test.txt",header = FALSE)
 cp3train<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/train/X_train.txt",header = FALSE)
 cp3q1Data<-rbind(cp3test,cp3train) 
-write.csv(cp3q1Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningDataCourseProject/cp3q1Data.csv")
+write.table(cp3q1Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningData/cp3q1Data.txt")
 
 
 #2.Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -15,7 +15,7 @@ cp3q2Base<-cp3q1Data
 cp3q2Mean<-apply(cp3q2Base,2,mean)  
 cp3q2Sd<-apply(cp3q2Base,2,sd)
 cp3q2Data<-data.frame(cp3q2Mean,cp3q2Sd)
-write.csv(cp3q2Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningDataCourseProject/cp3q2Data.csv")
+write.table(cp3q2Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningData/cp3q2Data.txt")
 
 
 #3.Uses descriptive activity names to name the activities in the data set.
@@ -28,7 +28,7 @@ names(cp3train_y)<-c("y")
 names(activity_labels)<-c("y","activity")
 cp3q3Base<-rbind(cbind(cp3test,cp3test_y),cbind(cp3train,cp3train_y))
 cp3q3Data<-merge(cp3q3Base,activity_labels,by="y", all.x = TRUE)
-write.csv(cp3q3Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningDataCourseProject/cp3q3Data.csv")
+write.table(cp3q3Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningData/cp3q3Data.txt")
 
 
 #4.Appropriately labels the data set with descriptive variable names.
@@ -40,7 +40,7 @@ cp3q4Base<-cp3q3Data[,2:562]
 names(cp3q4Base)<- colnam
 activity<-cp3q3Data$activity
 cp3q4Data<-cbind(activity,cp3q4Base)
-write.csv(cp3q4Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningDataCourseProject/cp3q4Data.csv")
+write.table(cp3q4Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningData/cp3q4Data.txt")
 
 
 #5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.

@@ -36,7 +36,7 @@ R script called run_analysis.R  that did all the following.
 
 (1)features is the vector of the exact variable names.
 
-(2)cp3q3Data is the target data set which has appropriately labels.
+(2)cp3q4Data is the target data set which has appropriately labels.
 
 
 

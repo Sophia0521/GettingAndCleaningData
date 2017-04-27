@@ -13,6 +13,7 @@ R script called run_analysis.R  that did all the following.
 (2)cp3q1Data is the target data set.
 
 
+
 2.Extracts only the measurements on the mean and standard deviation for each measurement.
 
 (1)cp3q2mean is the vector of mean for each measurement.
@@ -22,6 +23,7 @@ R script called run_analysis.R  that did all the following.
 (3)cp3q2Data is the target data set,including the mean and standard deviation.
 
 
+
 3.Uses descriptive activity names to name the activities in the data set
 
 (1)activity_labels is vector of activity names.
@@ -29,11 +31,13 @@ R script called run_analysis.R  that did all the following.
 (2)cp3q3Data is the target data set which has exact activity tag.
 
 
+
 4.Appropriately labels the data set with descriptive variable names.
 
 (1)features is the vector of the exact variable names.
 
-(2)cp3q4Data is the target data set which has appropriately labels.
+(2)cp3q3Data is the target data set which has appropriately labels.
+
 
 
 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.

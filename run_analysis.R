@@ -34,7 +34,7 @@ write.table(cp3q3Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningD
 
 #4.Appropriately labels the data set with descriptive variable names.
 ##features is the vector of the exact variable names.
-##cp3q3Data is the target data set which has appropriately labels.
+##cp3q4Data is the target data set which has appropriately labels.
 features<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/features.txt",header = FALSE)
 colnam<-features$V2
 cp3q4Base<-cp3q3Data[,2:562]

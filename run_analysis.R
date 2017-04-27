@@ -19,7 +19,8 @@ write.table(cp3q2Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningD
 
 
 #3.Uses descriptive activity names to name the activities in the data set.
-##
+##activity_labels is vector of activity names.
+##cp3q3Data is the target data set which has exact activity tag.
 activity_labels<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/activity_labels.txt",header = FALSE)
 cp3test_y<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/test/y_test.txt",header = FALSE)
 cp3train_y<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/train/y_train.txt",header = FALSE)
@@ -32,8 +33,8 @@ write.table(cp3q3Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningD
 
 
 #4.Appropriately labels the data set with descriptive variable names.
-##
-##
+##features is the vector of the exact variable names.
+##cp3q3Data is the target data set which has appropriately labels.
 features<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/features.txt",header = FALSE)
 colnam<-features$V2
 cp3q4Base<-cp3q3Data[,2:562]

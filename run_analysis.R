@@ -45,7 +45,7 @@ write.table(cp3q4Data,file="F:/datascience/rworkspace/sophia/GettingAndCleaningD
 
 
 #5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-##
+##TidydataFinal is the target data set.
 cp3testSub<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt",header = FALSE)
 cp3trainSub<- read.table(file = "F:/datascience/rworkspace/getdata%2Fprojectfiles%2FUCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt",header = FALSE)
 cp3Base<-rbind(cbind(cp3test_y,cp3testSub,cp3test),cbind(cp3train_y,cp3trainSub,cp3train))
@@ -55,5 +55,6 @@ y<-cp3Base$y
 subject<-cp3Base$subject
 cp3Base<-cbind(y,subject,cp3q5Base)
 cp3Base2<-merge(cp3Base,activity_labels,by="y", all.x = TRUE)
-library(tidyr)
-
+cp3Base3<-aggregate(cp3Base2[,3:563],by=list(subject=cp3Base2$subject,activity=cp3Base2$activity),FUN = mean)
+TidydataFinal<-cp3Base3[order(cp3Base3$subject, cp3Base3$activity),]
+write.table(TidydataFinal,file="F:/datascience/rworkspace/sophia/GettingAndCleaningData/TidydataFinal.txt")

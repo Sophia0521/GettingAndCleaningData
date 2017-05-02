@@ -57,4 +57,6 @@ cp3Base<-cbind(y,subject,cp3q5Base)
 cp3Base2<-merge(cp3Base,activity_labels,by="y", all.x = TRUE)
 cp3Base3<-aggregate(cp3Base2[,3:563],by=list(subject=cp3Base2$subject,activity=cp3Base2$activity),FUN = mean)
 TidydataFinal<-cp3Base3[order(cp3Base3$subject, cp3Base3$activity),]
+
 write.table(TidydataFinal,file="F:/datascience/rworkspace/sophia/GettingAndCleaningData/TidydataFinal.txt")
+##TidydataFinal is the target data set.

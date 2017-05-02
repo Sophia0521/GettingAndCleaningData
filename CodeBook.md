@@ -13,7 +13,8 @@
 ### Data dictionary
 ## Description of each variables present in tidy data:
 
-* Subject: Subject ID [1,2,3,...,29,30]
+* SubjectID: Subject ID [1,2,3,...,29,30]
+* ActivityID: ActivityID[1,2,...,6].
 * Activity: Activity performed by the Subject,including 6 kinds of activities.
 * timeBodyAccelerometer-mean()-X: Mean value of signal from accelerometer (AVERAGE)
 * timeBodyAccelerometer-mean()-Y: Mean value of signal from accelerometer (AVERAGE)

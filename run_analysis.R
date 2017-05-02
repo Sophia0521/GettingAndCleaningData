@@ -67,7 +67,7 @@ run_analysis <- function()
   TidydataFinal<-TidydataFinal[order(TidydataFinal$ActivityID,TidydataFinal$SubjectID,TidydataFinal$Activity),]
   
 
-  write.table(TidydataFinal,file="F:/datascience/rworkspace/sophia/GettingAndCleaningData/TidydataFinal.txt",row.name=FALSE)
+  write.table(TidydataFinal,file="F:/datascience/rworkspace/sophia/GettingAndCleaningData/TidydataFinal.txt",row.names=FALSE)
 
 ##end
 
